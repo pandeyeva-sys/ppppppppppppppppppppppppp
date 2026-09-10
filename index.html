@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050814" />
+    <title>Neon Rift — 3D Arcade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <div class="brand"><span class="brand-mark">✦</span><span>NEON RIFT</span></div>
+        <div class="stat"><small>SCORE</small><strong id="score">000000</strong></div>
+        <div class="stat"><small>SECTOR</small><strong id="sector">01</strong></div>
+        <div class="stat lives"><small>HULL</small><strong id="hull">● ● ●</strong></div>
+      </header>
+      <section class="viewport" aria-label="Neon Rift game area">
+        <canvas id="game" aria-label="A 3D arcade space game"></canvas>
+        <div id="startScreen" class="overlay">
+          <p class="eyebrow">SURVIVAL RUN // 2088</p>
+          <h1>ENTER THE<br /><em>NEON RIFT</em></h1>
+          <p class="instructions">Dodge incoming fragments. Aim with your pointer or use <kbd>A</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>→</kbd>. Fire with <kbd>SPACE</kbd>.</p>
+          <button id="startButton">START RUN <span>↗</span></button>
+        </div>
+        <div id="flash" aria-hidden="true"></div>
+        <div class="reticle" aria-hidden="true"></div>
+      </section>
+      <footer><span>MOVE // A D or ← →</span><span>FIRE // SPACE or CLICK</span><span>PAUSE // P</span></footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
